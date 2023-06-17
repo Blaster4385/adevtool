@@ -19,3 +19,19 @@ filters:
   deprivileged_apks:
     prefix:
       - system_ext/priv-app/PixelNfc/
+  presigned:
+    match:
+      - product/app/NgaResources/NgaResources.apk
+      - product/app/PixelCameraServicesL10/PixelCameraServicesL10.apk
+      - product/app/VZWAPNLib/VZWAPNLib.apk
+      - product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk
+      - product/priv-app/CarrierSettings/CarrierSettings.apk
+      - product/priv-app/CarrierWifi/CarrierWifi.apk
+      - product/priv-app/DevicePersonalizationPrebuiltPixel2022/DevicePersonalizationPrebuiltPixel2022.apk
+      - product/priv-app/EuiccGoogle/EuiccGoogle.apk
+      - product/priv-app/HotwordEnrollmentOKGoogleFUSIONPro/HotwordEnrollmentOKGoogleFUSIONPro.apk
+      - product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIONPro.apk
+      - product/priv-app/WfcActivation/WfcActivation.apk
+      - system_ext/priv-app/CarrierSetup/CarrierSetup.apk
+      - system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk
+      - system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk

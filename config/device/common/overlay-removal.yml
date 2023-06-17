@@ -88,6 +88,7 @@ filters:
       - android:string-array/config_companionDevicePackages
       - android:string-array/config_defaultCloudSearchServices
       - android:string-array/config_defaultFirstUserRestrictions
+      - android:string-array/config_defaultPinnerServiceFiles
       - android:string-array/config_disabledUntilUsedPreinstalledImes
       - android:string-array/config_disabledUntilUsedPreinstalledImes
       # com.google.android.gms/.auth.api.credentials.credman.service.PasswordAndPasskeyService
@@ -219,7 +220,6 @@ filters:
       - com.android.networkstack/NetworkStackConfig:bool/config_dhcp_client_hostname
       - com.android.phone:string-array/thermal_mitigation_allowlisted_packages
       - com.android.phone:string/dialer_default_class
-      - com.android.phone:string/platform_carrier_config_package
       - com.android.phone:string/platform_number_verification_package
       - com.android.providers.contacts:string/metadata_sync_pacakge
       - com.android.providers.telephony:string/apn_source_service
