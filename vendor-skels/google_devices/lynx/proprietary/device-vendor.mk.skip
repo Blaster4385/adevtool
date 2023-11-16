@@ -10,7 +10,6 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += vendor/google_devices/lynx/proprietary
 
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.gwfcactivation.disabled_carriers=1492 \
-    ro.preventative_fsck=1 \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
 
@@ -32,6 +31,7 @@ PRODUCT_PACKAGES += \
     ambient \
     ambient_micro \
     ambient_volume \
+    AmbientStreaming \
     android.auto_generated_rro_product_adevtool__ \
     android.auto_generated_rro_vendor_adevtool__ \
     android.frameworks.sensorservice-V1-ndk.vendor:32 \
@@ -43,10 +43,7 @@ PRODUCT_PACKAGES += \
     android.hardware.authsecret-V1-ndk.vendor:64 \
     android.hardware.biometrics.common-V2-ndk.vendor:64 \
     android.hardware.biometrics.common-V3-ndk.vendor:64 \
-    android.hardware.biometrics.face-service-lynx \
-    android.hardware.biometrics.face-service-lynx__2 \
     android.hardware.biometrics.face-V3-ndk.vendor:64 \
-    android.hardware.biometrics.face@1.0.vendor:64 \
     android.hardware.biometrics.fingerprint-service.goodix \
     android.hardware.biometrics.fingerprint-V2-ndk.vendor:64 \
     android.hardware.bluetooth@1.0-service-qti \
@@ -131,6 +128,7 @@ PRODUCT_PACKAGES += \
     aoc_aud_ext \
     aoc_audio_stereo_spatializer \
     aocd \
+    AppDirectedSMSService \
     ar_bridge \
     audio_adapted_info_features \
     audio_amcs_ext \
@@ -148,6 +146,9 @@ PRODUCT_PACKAGES += \
     bipchmgr \
     blue \
     capo \
+    CarrierSettings \
+    CarrierSetup \
+    CarrierWifi \
     cbd \
     cc \
     chre \
@@ -156,14 +157,14 @@ PRODUCT_PACKAGES += \
     cnss-daemon \
     columbus \
     columbus_lite \
-    com.android.networkstack.tethering__TetheringConfig.auto_generated_rro_product_adevtool__ \
+    com.android.hotwordenrollment.common.util \
     com.android.phone.auto_generated_rro_product_adevtool__ \
-    com.android.server.telecom.auto_generated_rro_product_adevtool__ \
     com.android.settings.auto_generated_rro_product_adevtool__ \
     com.android.systemui.auto_generated_rro_product_adevtool__ \
     com.android.traceur.auto_generated_rro_product_adevtool__ \
     com.google.android.camera.experimental2022 \
     com.google.android.camera.extensions \
+    com.google.android.camerax.extensions \
     com.google.android.widevine \
     com.google.edgetpu_app_service-V2-ndk \
     com.google.edgetpu_app_service-V2-ndk__system_ext \
@@ -172,15 +173,20 @@ PRODUCT_PACKAGES += \
     com.google.edgetpu.dba-service \
     com.google.edgetpu.dba-service__2 \
     com.google.edgetpu.dba-V1-ndk \
-    com.google.euiccpixel.auto_generated_rro_product_adevtool__ \
     com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk \
     com.google.hardware.pixel.display-V4-ndk.vendor:64 \
     com.google.hardware.pixel.display-V6-ndk.vendor \
     com.google.input-V2-ndk \
     com.google.pixel.camera.hal \
     com.google.pixel.wifi.ext \
+    ConnectivityThermalPowerManager \
+    ConnMO \
+    DCMO \
+    DevicePersonalizationPrebuiltPixel2022 \
+    DiagMon \
     dmd \
     dmd__2 \
+    DMService \
     drop \
     EuiccGoogle \
     EuiccGoogleOverlay \
@@ -193,6 +199,8 @@ PRODUCT_PACKAGES += \
     gesture \
     google-ril \
     google.hardware.media.c2@1.0-service \
+    GoogleCamera \
+    grilservice \
     gxp_metrics_logger \
     gxp_telemetry_reader \
     hardware.google.bluetooth.bt_channel_avoidance@1.0-impl \
@@ -200,7 +208,11 @@ PRODUCT_PACKAGES += \
     hardware.google.bluetooth.sar@1.0.vendor \
     hardware.google.bluetooth.sar@1.1-impl \
     hardware.google.bluetooth.sar@1.1.vendor \
+    HardwareInfo \
+    HbmSVManager \
     health \
+    HotwordEnrollmentOKGoogleFUSIONPro \
+    HotwordEnrollmentXGoogleFUSIONPro \
     imu_cal \
     init_citadel \
     init.camera.set-interrupts-ownership \
@@ -278,6 +290,7 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor:32 \
     libhidparser \
     libhwbinder.vendor \
+    libhwinfo \
     libidl \
     libion_exynos \
     libkeymaster4support.vendor:64 \
@@ -304,7 +317,6 @@ PRODUCT_PACKAGES += \
     libOpenCL \
     libOpenCL-pixel \
     libperipheral_client \
-    libpowerstatshaldataprovider__system_ext \
     libproxy_trusty \
     libqmi_cci \
     libqmi_common_so \
@@ -339,6 +351,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwlcproto_aidl-default \
+    LLKAgent \
     loc_launcher \
     lowi-server \
     manifest_input.processor-service \
@@ -347,20 +360,24 @@ PRODUCT_PACKAGES += \
     modem_logging_control \
     modem_svc_sit \
     motiondetector \
+    MyVerizonServices \
     nearby \
     nos_app_avb:64 \
     nos_app_identity:64 \
     nos_app_keymaster:64 \
     nos_app_weaver:64 \
+    OemDmTrigger \
     oemrilhook \
     OemRilHookService \
     OemRilService \
     pixel-power-ext-V1-ndk.vendor:32 \
+    PixelCameraServicesL10 \
     PixelNfc \
     pixelpowerstats_provider_aidl_interface-cpp.vendor:64 \
     PixelQualifiedNetworksService \
-    pvmfw_bin \
+    RadioConfigLib \
     rfsd \
+    RilConfigService \
     rild_exynos \
     samsung.hardware.media.c2@1.0-service \
     sd \
@@ -371,6 +388,8 @@ PRODUCT_PACKAGES += \
     ShannonRcs \
     smartbatching \
     sound_trigger.primary.gs201 \
+    TetheringEntitlement \
+    Traceur \
     trusty_metricsd \
     twoshay \
     umfw_stat_tool \
@@ -407,9 +426,12 @@ PRODUCT_PACKAGES += \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.0__system_ext \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.1 \
     vulkan.mali \
-    wfc-pkt-router
+    VZWAPNLib \
+    wfc-pkt-router \
+    WfcActivation
 
 PRODUCT_COPY_FILES += \
+    vendor/google_devices/lynx/proprietary/product/etc/ambient/matcher_tah.leveldb:$(TARGET_COPY_OUT_PRODUCT)/etc/ambient/matcher_tah.leveldb \
     vendor/google_devices/lynx/proprietary/product/etc/CarrierSettings/1and1_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/1and1_de.pb \
     vendor/google_devices/lynx/proprietary/product/etc/CarrierSettings/2degrees_nz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/2degrees_nz.pb \
     vendor/google_devices/lynx/proprietary/product/etc/CarrierSettings/a1_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1_at.pb \
@@ -667,6 +689,10 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/lynx/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/google_devices/lynx/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     vendor/google_devices/lynx/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
+    vendor/google_devices/lynx/proprietary/product/etc/firmware/music_detector.descriptor:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.descriptor \
+    vendor/google_devices/lynx/proprietary/product/etc/firmware/music_detector.sound_model:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model \
+    vendor/google_devices/lynx/proprietary/product/etc/firmware/music_detector.sound_model_2:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_2 \
+    vendor/google_devices/lynx/proprietary/product/etc/firmware/music_detector.sound_model_tflite:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_tflite \
     vendor/google_devices/lynx/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/lynx/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
     vendor/google_devices/lynx/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in \
@@ -707,7 +733,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/lynx/proprietary/vendor/etc/database/ecc_version:$(TARGET_COPY_OUT_VENDOR)/etc/database/ecc_version \
     vendor/google_devices/lynx/proprietary/vendor/etc/faceauth_pipeline_input_lynx:$(TARGET_COPY_OUT_VENDOR)/etc/faceauth_pipeline_input_lynx \
     vendor/google_devices/lynx/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
-    vendor/google_devices/lynx/proprietary/vendor/etc/init/android.hardware.biometrics.face-service-lynx.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.face-service-lynx.rc \
     vendor/google_devices/lynx/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/google_devices/lynx/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google_devices/lynx/proprietary/vendor/etc/init/android.hardware.confirmationui-service.trusty.vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.confirmationui-service.trusty.vendor.rc \
@@ -1701,20 +1726,37 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/lynx/proprietary/vendor/firmware/uecapconfig/WILDCARD.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/WILDCARD.binarypb \
     vendor/google_devices/lynx/proprietary/vendor/firmware/uecapconfig/WINDTRE.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/WINDTRE.binarypb \
     vendor/google_devices/lynx/proprietary/vendor/firmware/wlan/qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qcom_cfg.ini \
-    vendor/google_devices/lynx/proprietary/product/etc/permissions/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
     vendor/google_devices/lynx/proprietary/product/etc/permissions/androidx.camera.extensions.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/androidx.camera.extensions.impl.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/permissions/com.android.sdm.plugins.connmo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.connmo.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/permissions/com.android.sdm.plugins.dcmo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.dcmo.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/permissions/com.android.sdm.plugins.diagmon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.diagmon.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/permissions/com.google.android.hardwareinfo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.hardwareinfo.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/permissions/com.verizon.apn.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.verizon.apn.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/permissions/com.verizon.services.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.verizon.services.xml \
     vendor/google_devices/lynx/proprietary/product/etc/permissions/features-verizon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/features-verizon.xml \
     vendor/google_devices/lynx/proprietary/product/etc/sysconfig/allowlist_com.shannon.imsservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.shannon.imsservice.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/sysconfig/google-initial-package-stopped-states.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-initial-package-stopped-states.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/sysconfig/pixel_2017-initial-package-stopped-states.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2017-initial-package-stopped-states.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/sysconfig/pixel_experience_2021_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2021_midyear.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/sysconfig/pixel_experience_2021.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2021.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/sysconfig/pixel_experience_2022_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022_midyear.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/sysconfig/pixel_experience_2022.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022.xml \
+    vendor/google_devices/lynx/proprietary/product/etc/sysconfig/pixel_experience_2023_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2023_midyear.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/default-permissions/default-permissions-euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-euiccpixel.xml \
+    vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
+    vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.android.omadm.radioconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.omadm.radioconfig.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.android.qns.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.qns.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.google.android.camera.extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.android.camera.extensions.xml \
+    vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.google.android.camerax.extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.android.camerax.extensions.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.google.euiccpixel.permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.euiccpixel.permissions.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.google.euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.euiccpixel.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.samsung.slsi.telephony.oemril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.samsung.slsi.telephony.oemril.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.shannon.imsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.shannon.imsservice.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.shannon.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.shannon.rcsservice.xml \
+    vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/com.verizon.llkagent.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.verizon.llkagent.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/google-ril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/google-ril.xml \
     vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/oemrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/oemrilhook.xml \
+    vendor/google_devices/lynx/proprietary/system_ext/etc/permissions/vzw_mvs_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vzw_mvs_permissions.xml \
     vendor/google_devices/lynx/proprietary/vendor/etc/database/DbEcc_202.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_202.xml \
     vendor/google_devices/lynx/proprietary/vendor/etc/database/DbEcc_204.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_204.xml \
     vendor/google_devices/lynx/proprietary/vendor/etc/database/DbEcc_206.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_206.xml \
