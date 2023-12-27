@@ -15,6 +15,7 @@ com.android.settings:string-array/enabled_networks_values = 10,0,1
 com.android.settings:bool/config_hspa_data_distinguishable = true
 com.android.systemui:integer-array/config_nfc_conflict_with_usb_audio_productid = 20532
 com.android.systemui:integer-array/config_nfc_conflict_with_usb_audio_vendorid = 6353
+com.android.systemui:bool/config_hspa_data_distinguishable = true
 com.android.systemui:bool/config_nfc_conflict_with_usb_audio = true
 com.android.systemui:bool/config_nfc_conflict_with_wlc = true
 com.android.systemui:bool/config_request_pre_auth_refresh_rate = true
